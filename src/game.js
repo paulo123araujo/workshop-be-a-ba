@@ -2,13 +2,13 @@ export const game = {
     letters: [],
     streak: 0,
     inputedWords: [],
-    newGame: function() {
+    newGame: function () {
         this.letters = [];
         this.inputedWords = [];
 
         const alphabet = 'aabcdeefghiijlmnoopqrstuuvxz';
-    
-        this.letters = new Array(3).fill().map(function(letter) {
+
+        this.letters = new Array(3).fill().map(function (letter) {
             const randomIndex = Math.floor(Math.random() * alphabet.length);
             return alphabet[randomIndex];
         });
@@ -21,7 +21,7 @@ export const game = {
             if (!word.includes(tempLetters[0])) {
                 return false;
             }
-            tempLetters.slice(1, tempLetters.length);
+            tempLetters.splice(0, 1)
         }
 
         if (this.inputedWords.includes(word)) {
@@ -34,7 +34,7 @@ export const game = {
         if (!data.length) {
             return false;
         }
-        
+
         this.inputedWords.push(word);
         this.streak++;
         return true;
