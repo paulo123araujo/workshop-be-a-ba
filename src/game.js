@@ -17,11 +17,11 @@ export const game = {
     },
     validateWord: async function (word) {
         const tempLetters = [...this.letters];
-        for (let i = 0; i < this.letters.length; i++) {
-            if (word.includes(tempLetters) === false) {
+        while (tempLetters.length > 0) {
+            if (!word.includes(tempLetters[0])) {
                 return false;
             }
-
+            tempLetters.slice(1, tempLetters.length);
         }
 
         if (this.inputedWords.includes(word)) {

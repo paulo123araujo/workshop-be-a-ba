@@ -16,8 +16,9 @@ body {
 
 #app {
     height: -webkit-fill-available;
-    /* height: -moz-available; */
-    /* height: 100%; */
+    height: fill-available;
+    height: -moz-available;
+    height: 100%;
     width: 100%;
     margin: 0 auto;
     text-align: center;
