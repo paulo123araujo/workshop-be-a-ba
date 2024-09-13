@@ -5,7 +5,7 @@ const inputElem = document.getElementById('word');
 const errorElem = document.getElementById('error');
 const streakElem = document.getElementById('streak');
 
-newGameButtonElem.addEventListener('click', function() {
+newGameButtonElem.addEventListener('click', function () {
     game.newGame();
     const lettersElem = document.querySelectorAll('.square');
     for (let i = 0; i < lettersElem.length; i++) {
@@ -19,7 +19,7 @@ newGameButtonElem.addEventListener('click', function() {
     streakElem.innerHTML = ''
 })
 
-document.getElementById('form').addEventListener('submit',  async function (event) {
+document.getElementById('form').addEventListener('submit', async function (event) {
     event.preventDefault();
 
     const formData = new FormData(event.target);
